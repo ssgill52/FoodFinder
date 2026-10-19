@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodFinder - Food & Recipe Discovery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🍲 FoodFinder</h1>
+    <p>Discover delicious meals, explore global cuisines, and view cooking steps.</p>
+  </header>
+
+  <main>
+    <!-- Search & Filter Controls -->
+    <section class="controls-card">
+      <div class="search-box">
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Search by meal name (e.g., Chicken, Soup, Pie)..." 
+        />
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <div class="filter-box">
+        <label for="categoryFilter">Category:</label>
+        <select id="categoryFilter">
+          <option value="All">All Categories</option>
+        </select>
+
+        <label for="areaFilter">Cuisine / Area:</label>
+        <select id="areaFilter">
+          <option value="All">All Cuisines</option>
+        </select>
+
+        <button id="resetBtn" class="secondary-btn">Reset</button>
+      </div>
+    </section>
+
+    <!-- Status & Results Count -->
+    <div id="statusMessage" class="status-msg">Loading meals from TheMealDB API...</div>
+
+    <!-- Meal Card Grid -->
+    <section id="mealGrid" class="meal-grid"></section>
+
+    <!-- Recipe Detail Modal Popup -->
+    <div id="recipeModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModalBtn" class="close-btn">&times;</span>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
